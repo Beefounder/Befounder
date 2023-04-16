@@ -1,5 +1,10 @@
 import React from "react";
+import { Header } from "../../components/layout/Header/Header";
 
 export const HomePageView = () => {
-  return <div>HomepageView</div>;
+  return (
+    <main>
+      <Header />
+    </main>
+  );
 };

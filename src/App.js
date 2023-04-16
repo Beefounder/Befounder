@@ -1,5 +1,11 @@
+import { HomepageContainer } from "./pages/Homepage/HomePageContainer";
+
 function App() {
-  return <main></main>;
+  return (
+    <>
+      <HomepageContainer />
+    </>
+  );
 }
 
 export default App;
