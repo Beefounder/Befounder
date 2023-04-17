@@ -1,5 +1,9 @@
+import Footer from "./components/layout/Footer/Footer";
+
 function App() {
-  return <main></main>;
+  return <main>
+    <Footer />
+  </main>;
 }
 
 export default App;
