@@ -1,9 +1,12 @@
-import Footer from "./components/layout/Footer/Footer";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HomepageContainer } from "./pages/Homepage/HomePageContainer";
 
 function App() {
-  return <main>
-    <Footer />
-  </main>;
+  return (
+    <BrowserRouter>
+      <HomepageContainer />
+    </BrowserRouter>
+  );
 }
 
 export default App;
