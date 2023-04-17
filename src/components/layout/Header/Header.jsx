@@ -1,8 +1,10 @@
 import { useState } from "react";
+import { Signup } from "../../modals/Signup/Signup";
 import { hamburger, logo } from "../../../assets/icons";
 
 export const Header = () => {
   const [opened, setOpened] = useState(false);
+  const [openModal, setOpenModal] = useState(false);
 
   return (
     <>
@@ -27,9 +29,13 @@ export const Header = () => {
           </li>
         </ul>
         <div>
-          <button className="bg-[#090A2A] text-[#ECEBEF] py-3 px-5 rounded-lg mr-2">
+          <button
+            onClick={() => setOpenModal(!openModal)}
+            className="bg-[#090A2A] text-[#ECEBEF] py-3 px-5 rounded-lg mr-2"
+          >
             Sign Up
           </button>
+          <Signup open={openModal} onClose={() => setOpenModal(false)} />
           <button className="bg-[#fff] text-[#22232A] border border-[#000211]  py-3 px-6 rounded-lg">
             Log In
           </button>
