@@ -1,6 +1,6 @@
 import { close } from "../../../assets/icons";
 
-export const Signup = ({ open, onClose }) => {
+export const Login = ({ open, onClose }) => {
   if (!open) return null;
 
   return (
@@ -16,7 +16,7 @@ export const Signup = ({ open, onClose }) => {
       >
         <div className="flex gap-12 md:gap-32 lg:gap-40 mb-4 pl-3 md:pl-24 lg:pl-32 pr-7">
           <h1 className="text-xl md:text-2xl text-[#090A2A] font-medium">
-            Sign in or create an account to post offer
+            Sign in or create an account to post offer{" "}
           </h1>
           <button className="cursor-pointer p-2">
             <img
@@ -32,7 +32,7 @@ export const Signup = ({ open, onClose }) => {
             Collaborate with top talents to bring your idea to life
           </p>
           <h1 className="text-xl  md:text-2xl text-[#090A2A] font-medium mt-4 mb-7">
-            Create a Befounder account{" "}
+            Log into you account{" "}
           </h1>
           <div className="flex flex-col items-center gap-4 w-full">
             <input
@@ -48,7 +48,7 @@ export const Signup = ({ open, onClose }) => {
             <input
               className="w-10/12 p-3 bg-[#000211] text-[#fff] rounded"
               type="button"
-              value="Create Account"
+              value="Log In"
             />
           </div>
         </div>

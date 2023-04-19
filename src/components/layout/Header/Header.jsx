@@ -1,10 +1,12 @@
 import { useState } from "react";
 import { Signup } from "../../modals/Signup/Signup";
 import { hamburger, logo } from "../../../assets/icons";
+import { Login } from "../../modals/Login/Login";
 
 export const Header = () => {
   const [isMobile, setIsMobile] = useState(false);
-  const [openModal, setOpenModal] = useState(false);
+  const [openSignup, setOpenSignup] = useState(false);
+  const [openLogin, setOpenLogin] = useState(false);
 
   return (
     <>
@@ -30,15 +32,19 @@ export const Header = () => {
         </ul>
         <div>
           <button
-            onClick={() => setOpenModal(!openModal)}
+            onClick={() => setOpenSignup(!openSignup)}
             className="bg-[#090A2A] text-[#ECEBEF] text-base py-3 px-5 rounded-lg mr-2"
           >
             Sign Up
           </button>
-          <Signup open={openModal} onClose={() => setOpenModal(false)} />
-          <button className="bg-[#fff] text-[#22232A] text-base border border-[#000211]  py-3 px-6 rounded-lg">
+          <Signup open={openSignup} onClose={() => setOpenSignup(false)} />
+          <button
+            onClick={() => setOpenLogin(!openLogin)}
+            className="bg-[#fff] text-[#22232A] text-base border border-[#000211]  py-3 px-6 rounded-lg"
+          >
             Log In
           </button>
+          <Login open={openLogin} onClose={() => setOpenLogin(false)} />
         </div>
       </navbar>
 
@@ -60,15 +66,19 @@ export const Header = () => {
           <div className="flex flex-col gap-8 px-8 absolute w-full py-7 bg-white border border-[#090A2A]">
             <div>
               <button
-                onClick={() => setOpenModal(!openModal)}
+                onClick={() => setOpenSignup(!openSignup)}
                 className="bg-[#090A2A] text-[#ECEBEF] text-base py-3 w-full rounded-lg mr-2 block mb-3"
               >
                 Sign Up
               </button>
-              <Signup open={openModal} onClose={() => setOpenModal(false)} />
-              <button className="bg-[#fff] text-[#22232A] text-base border border-[#000211] w-full  py-3 rounded-lg">
+              <Signup open={openSignup} onClose={() => setOpenSignup(false)} />
+              <button
+                onClick={() => setOpenLogin(!openLogin)}
+                className="bg-[#fff] text-[#22232A] text-base border border-[#000211] w-full  py-3 rounded-lg"
+              >
                 Log In
               </button>
+              <Login open={openLogin} onClose={() => setOpenLogin(false)} />
             </div>
             <ul className="flex flex-col gap-6">
               <li>
