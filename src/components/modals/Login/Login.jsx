@@ -1,9 +1,10 @@
-import { useState } from "react";
 import { close } from "../../../assets/icons";
-import { Login } from "../../modals/Login/Login";
+import { useState } from "react";
+import { Signup } from "../Signup/Signup";
 
-export const Signup = ({ open, onClose }) => {
-  const [openLogin, setOpenLogin] = useState(false);
+export const Login = ({ open, onClose }) => {
+  const [openSignup, setOpenSignup] = useState(false);
+
   if (!open) return null;
 
   return (
@@ -19,7 +20,7 @@ export const Signup = ({ open, onClose }) => {
       >
         <div className="flex gap-12 md:gap-32 lg:gap-40 mb-4 pl-3 md:pl-24 lg:pl-32 pr-7">
           <h1 className="text-xl md:text-2xl text-[#090A2A] font-medium">
-            Sign in or create an account to post offer
+            Sign in or create an account to post offer{" "}
           </h1>
           <button className="cursor-pointer p-2">
             <img
@@ -35,7 +36,7 @@ export const Signup = ({ open, onClose }) => {
             Collaborate with top talents to bring your idea to life
           </p>
           <h1 className="text-xl  md:text-2xl text-[#090A2A] font-medium mt-4 mb-7">
-            Create a Befounder account{" "}
+            Log into you account{" "}
           </h1>
           <div className="flex flex-col items-center gap-4 w-full">
             <input
@@ -51,21 +52,25 @@ export const Signup = ({ open, onClose }) => {
             <input
               className="w-10/12 p-3 bg-[#000211] text-[#fff] rounded"
               type="button"
-              value="Create Account"
+              value="Log In"
             />
           </div>
           <div className="m-11 text-left">
-            <p className="mt-8  text-sm">
-              Have an account?{" "}
+            <p className="mt-8 text-sm">
+              New to Befounder?{" "}
               <a
                 href
-                onClick={() => setOpenLogin(!openLogin)}
+                onClick={() => setOpenSignup(!openSignup)}
                 className="cursor-pointer text-[#1F2399]"
               >
-                Log In
+                Sign Up
               </a>
             </p>
-            <Login open={openLogin} onClose={() => setOpenLogin(false)} />
+            <Signup open={openSignup} onClose={() => setOpenSignup(false)} />
+
+            <a href className="cursor-pointer text-[#1F2399] text-sm mt-2">
+              Forgot password?
+            </a>
           </div>
         </div>
       </form>

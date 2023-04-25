@@ -5,6 +5,10 @@ function App() {
   return (
     <BrowserRouter>
       <HomepageContainer />
+      {/* <Routes>
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
+      </Routes> */}
     </BrowserRouter>
   );
 }
