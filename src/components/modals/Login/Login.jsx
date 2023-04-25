@@ -1,6 +1,10 @@
 import { close } from "../../../assets/icons";
+import { useState } from "react";
+import { Signup } from "../Signup/Signup";
 
 export const Login = ({ open, onClose }) => {
+  const [openSignup, setOpenSignup] = useState(false);
+
   if (!open) return null;
 
   return (
@@ -50,6 +54,23 @@ export const Login = ({ open, onClose }) => {
               type="button"
               value="Log In"
             />
+          </div>
+          <div className="m-11 text-left">
+            <p className="mt-8 text-sm">
+              New to Befounder?{" "}
+              <a
+                href
+                onClick={() => setOpenSignup(!openSignup)}
+                className="cursor-pointer text-[#1F2399]"
+              >
+                Sign Up
+              </a>
+            </p>
+            <Signup open={openSignup} onClose={() => setOpenSignup(false)} />
+
+            <a href className="cursor-pointer text-[#1F2399] text-sm mt-2">
+              Forgot password?
+            </a>
           </div>
         </div>
       </form>

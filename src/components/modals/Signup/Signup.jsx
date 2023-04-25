@@ -1,6 +1,9 @@
+import { useState } from "react";
 import { close } from "../../../assets/icons";
+import { Login } from "../../modals/Login/Login";
 
 export const Signup = ({ open, onClose }) => {
+  const [openLogin, setOpenLogin] = useState(false);
   if (!open) return null;
 
   return (
@@ -50,6 +53,19 @@ export const Signup = ({ open, onClose }) => {
               type="button"
               value="Create Account"
             />
+          </div>
+          <div className="m-11 text-left">
+            <p className="mt-8  text-sm">
+              Have an account?{" "}
+              <a
+                href
+                onClick={() => setOpenLogin(!openLogin)}
+                className="cursor-pointer text-[#1F2399]"
+              >
+                Log In
+              </a>
+            </p>
+            <Login open={openLogin} onClose={() => setOpenLogin(false)} />
           </div>
         </div>
       </form>
