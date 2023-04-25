@@ -1,9 +1,11 @@
 import { close } from "../../../assets/icons";
 import { useState } from "react";
 import { Signup } from "../Signup/Signup";
+import { ResetPassword } from "../ResetPassword/ResetPassword";
 
 export const Login = ({ open, onClose }) => {
   const [openSignup, setOpenSignup] = useState(false);
+  const [openResetPassword, setOpenResetPassword] = useState(false);
 
   if (!open) return null;
 
@@ -68,9 +70,17 @@ export const Login = ({ open, onClose }) => {
             </p>
             <Signup open={openSignup} onClose={() => setOpenSignup(false)} />
 
-            <a href className="cursor-pointer text-[#1F2399] text-sm mt-2">
+            <a
+              href
+              onClick={() => setOpenResetPassword(!openResetPassword)}
+              className="cursor-pointer text-[#1F2399] text-sm mt-2"
+            >
               Forgot password?
             </a>
+            <ResetPassword
+              open={openResetPassword}
+              onClose={() => setOpenResetPassword(false)}
+            />
           </div>
         </div>
       </form>
