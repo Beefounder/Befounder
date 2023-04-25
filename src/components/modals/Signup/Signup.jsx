@@ -15,7 +15,7 @@ export const Signup = ({ open, onClose }) => {
         onClick={(e) => {
           e.stopPropagation();
         }}
-        className="py-8 text-center bg-white"
+        className="py-8 text-center bg-white overflow-hidden"
       >
         <div className="flex gap-12 md:gap-32 lg:gap-40 mb-4 pl-3 md:pl-24 lg:pl-32 pr-7">
           <h1 className="text-xl md:text-2xl text-[#090A2A] font-medium">
