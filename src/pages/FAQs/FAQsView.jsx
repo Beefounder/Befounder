@@ -7,7 +7,7 @@ export const FAQsView = () => {
       <hr className="mb-8 text-[#090A2A]" />
 
       <div>
-        <div className="bg-[#F7F7FD] p-6 rounded-3xl mb-8 flex gap-18">
+        <div className="bg-[#F7F7FD] p-6 rounded-3xl mb-8 flex  md:gap-20">
           <div>
             <h2 className="text-[#090A2A] text-xl md:text-2xl font-semibold mb-5">
               What is Befounder?
@@ -21,7 +21,7 @@ export const FAQsView = () => {
           <span className="text-[#090A2A] font-medium text-4xl">-</span>
         </div>
 
-        <div className="bg-[#F7F7FD] p-6 rounded-3xl mb-8 flex gap-18">
+        <div className="bg-[#F7F7FD] p-6 rounded-3xl mb-8 flex md:gap-20">
           <div>
             <h2 className="text-[#090A2A] text-xl md:text-2xl font-semibold mb-5">
               How do i post an offer for others to apply?
@@ -36,7 +36,7 @@ export const FAQsView = () => {
           <span className="text-[#090A2A] font-medium text-4xl">-</span>
         </div>
 
-        <div className="bg-[#F7F7FD] p-6 rounded-3xl mb-8 flex gap-18">
+        <div className="bg-[#F7F7FD] p-6 rounded-3xl mb-8 flex md:gap-20">
           <div>
             <h2 className="text-[#090A2A] text-xl md:text-2xl font-semibold mb-5">
               What types of projects are available for Offers?{" "}
@@ -50,7 +50,7 @@ export const FAQsView = () => {
           <span className="text-[#090A2A] font-medium text-4xl">-</span>
         </div>
 
-        <div className="bg-[#F7F7FD] p-6 rounded-3xl mb-8 flex gap-18">
+        <div className="bg-[#F7F7FD] p-6 rounded-3xl mb-8 flex md:gap-20">
           <div>
             <h2 className="text-[#090A2A] text-xl md:text-2xl font-semibold mb-5">
               What should I name my Offer?{" "}
@@ -64,7 +64,7 @@ export const FAQsView = () => {
           <span className="text-[#090A2A] font-medium text-4xl">-</span>
         </div>
 
-        <div className="bg-[#F7F7FD] p-6 rounded-3xl mb-8 flex gap-18">
+        <div className="bg-[#F7F7FD] p-6 rounded-3xl mb-8 flex md:gap-[44rem]">
           <div>
             <h2 className="text-[#090A2A] text-xl md:text-2xl font-semibold mb-5">
               Are there any fees for posting an Offer?{" "}
@@ -76,7 +76,7 @@ export const FAQsView = () => {
           <span className="text-[#090A2A] font-medium text-4xl">-</span>
         </div>
 
-        <div className="bg-[#F7F7FD] p-6 rounded-3xl mb-8 flex gap-18">
+        <div className="bg-[#F7F7FD] p-6 rounded-3xl mb-8 flex md:gap-20">
           <div>
             <h2 className="text-[#090A2A] text-xl md:text-2xl font-semibold mb-5">
               How do I contact the Offer Poster or the person who applied for an
@@ -93,7 +93,7 @@ export const FAQsView = () => {
           <span className="text-[#090A2A] font-medium text-4xl">-</span>
         </div>
 
-        <div className="bg-[#F7F7FD] p-6 rounded-3xl mb-8 flex gap-18">
+        <div className="bg-[#F7F7FD] p-6 rounded-3xl mb-8 flex md:gap-20">
           <div>
             <h2 className="text-[#090A2A] text-xl md:text-2xl font-semibold mb-5">
               What if I have a dispute with Offer Poster or a problem with the
