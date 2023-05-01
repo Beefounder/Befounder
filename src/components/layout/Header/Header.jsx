@@ -16,17 +16,17 @@ export const Header = () => {
         <img src={logo} alt="Befounder logo" className="w-[100px]" />
         <ul className="flex gap-8">
           <li>
-            <a href className="text-[#737373] text-base">
+            <a href=".ff" className="text-[#737373] text-base">
               Offers
             </a>
           </li>
           <li>
-            <a href className="text-[#737373] text-base">
+            <a href=".ff" className="text-[#737373] text-base">
               About us
             </a>
           </li>
           <li>
-            <Link to="FAQs" href className="text-[#737373] text-base">
+            <Link to="FAQs" className="text-[#737373] text-base">
               FAQs
             </Link>
           </li>
@@ -83,19 +83,19 @@ export const Header = () => {
             </div>
             <ul className="flex flex-col gap-6">
               <li>
-                <a href className="text-[#010101] text-base">
+                <a href=".ff" className="text-[#010101] text-base">
                   Offers
                 </a>
               </li>
               <li>
-                <a href className="text-[#010101] text-base">
+                <a href=".ff" className="text-[#010101] text-base">
                   About us
                 </a>
               </li>
               <li>
-                <a href className="text-[#010101] text-base">
+                <Link to="FAQs" className="text-[#010101] text-base">
                   FAQs
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
