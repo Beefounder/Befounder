@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Signup } from "../../modals/Signup/Signup";
 import { hamburger, logo } from "../../../assets/icons";
 import { Login } from "../../modals/Login/Login";
+import { Link } from "react-router-dom";
 
 export const Header = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -25,9 +26,9 @@ export const Header = () => {
             </a>
           </li>
           <li>
-            <a href className="text-[#737373] text-base">
+            <Link to="FAQs" href className="text-[#737373] text-base">
               FAQs
-            </a>
+            </Link>
           </li>
         </ul>
         <div>
