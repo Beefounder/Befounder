@@ -1,10 +1,10 @@
 import { useState } from "react";
-import { Signup } from "../../modals/Signup/Signup";
+import Signup from "../../modals/Signup/Signup";
 import { hamburger, logo } from "../../../assets/icons";
-import { Login } from "../../modals/Login/Login";
+import Login from "../../modals/Login/Login";
 import { Link } from "react-router-dom";
 
-export const Header = () => {
+const Header = () => {
   const [isMobile, setIsMobile] = useState(false);
   const [openSignup, setOpenSignup] = useState(false);
   const [openLogin, setOpenLogin] = useState(false);
@@ -12,7 +12,7 @@ export const Header = () => {
   return (
     <>
       {/* Desktop navbar */}
-      <navbar className="hidden md:flex items-center md:justify-between p-6">
+      <nav className="hidden md:flex items-center md:justify-between p-6">
         <img src={logo} alt="Befounder logo" className="w-[100px]" />
         <ul className="flex gap-8">
           <li>
@@ -47,10 +47,10 @@ export const Header = () => {
           </button>
           <Login open={openLogin} onClose={() => setOpenLogin(false)} />
         </div>
-      </navbar>
+      </nav>
 
       {/* Mobile navbar */}
-      <navbar className="md:hidden">
+      <nav className="md:hidden">
         <div className="flex justify-between py-6 px-4">
           <div>
             <img src={logo} alt="Befounder logo" />
@@ -100,7 +100,8 @@ export const Header = () => {
             </ul>
           </div>
         </div>
-      </navbar>
+      </nav>
     </>
   );
 };
+export default Header;

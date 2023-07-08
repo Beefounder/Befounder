@@ -1,14 +1,14 @@
 import { useState } from "react";
 import { close } from "../../../assets/icons";
-import { Login } from "../../modals/Login/Login";
+import Login from "../Login/Login";
 
-export const Signup = ({ open, onClose }) => {
+const Signup = (modalOption: { open: any; onClose: any }) => {
   const [openLogin, setOpenLogin] = useState(false);
-  if (!open) return null;
+  if (!modalOption.open) return null;
 
   return (
     <div
-      onClick={onClose}
+      onClick={modalOption.onClose}
       className="fixed left-0 top-0 bottom-0 bg-black bg-opacity-25 w-full flex justify-center items-center"
     >
       <form
@@ -23,7 +23,7 @@ export const Signup = ({ open, onClose }) => {
           </h1>
           <button className="cursor-pointer p-2">
             <img
-              onClick={onClose}
+              onClick={modalOption.onClose}
               src={close}
               alt="x close icon"
               className=" max-w-md"
@@ -58,7 +58,7 @@ export const Signup = ({ open, onClose }) => {
             <p className="mt-8  text-sm">
               Have an account?{" "}
               <a
-                href
+                href="/"
                 onClick={() => setOpenLogin(!openLogin)}
                 className="cursor-pointer text-[#1F2399]"
               >
@@ -72,3 +72,4 @@ export const Signup = ({ open, onClose }) => {
     </div>
   );
 };
+export default Signup;

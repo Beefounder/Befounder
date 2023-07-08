@@ -1,11 +1,11 @@
 import { close } from "../../../assets/icons";
 
-export const ResetPassword = ({ open, onClose }) => {
-  if (!open) return null;
+const ResetPassword = (modalOption: { open: any; onClose: any }) => {
+  if (!modalOption.open) return null;
 
   return (
     <div
-      onClick={onClose}
+      onClick={modalOption.onClose}
       className="fixed left-0 top-0 bottom-0 bg-black bg-opacity-25 w-full flex justify-center items-center overflow-hidden"
     >
       <form
@@ -20,7 +20,7 @@ export const ResetPassword = ({ open, onClose }) => {
           </h1>
           <button className="cursor-pointer p-2">
             <img
-              onClick={onClose}
+              onClick={modalOption.onClose}
               src={close}
               alt="x close icon"
               className=" max-w-md"
@@ -46,3 +46,5 @@ export const ResetPassword = ({ open, onClose }) => {
     </div>
   );
 };
+
+export default ResetPassword;
