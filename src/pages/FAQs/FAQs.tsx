@@ -1,4 +1,4 @@
-const FAQs = () => {
+const FAQs: React.FC = () => {
   return (
     <main className="md:px-16 px-4 mb-12">
       <h1 className="text-[#090A2A] font-semibold text-3xl md:text-5xl mt-14 mb-10 text-center">
