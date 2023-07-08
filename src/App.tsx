@@ -5,8 +5,8 @@ import {
   RouterProvider,
   Routes,
 } from "react-router-dom";
-import { HomepageContainer } from "./pages/Homepage/HomePageContainer";
-import { FAQsContainer } from "./pages/FAQs/FAQsContainer";
+import { Homepage } from "./pages/Homepage";
+import { FAQs } from "./pages/FAQs";
 import Header from "./components/layout/Header/Header";
 import { Footer } from "./components/layout/Footer";
 
@@ -20,7 +20,7 @@ function Root() {
   return (
     <Routes>
       <Route element={<Layout />}>
-        <Route path="/FAQs" element={<FAQsContainer />} />
+        <Route path="/FAQs" element={<FAQs />} />
       </Route>
     </Routes>
   );
@@ -30,7 +30,7 @@ function Layout() {
   return (
     <>
       <Header />
-      <HomepageContainer />
+      <Homepage />
       <Outlet />
       <Footer />
     </>
