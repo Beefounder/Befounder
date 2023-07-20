@@ -5,7 +5,13 @@ import Login from "../Login/Login";
 const Signup = (modalOption: { open: any; onClose: any }) => {
   const [openLogin, setOpenLogin] = useState(false);
   if (!modalOption.open) return null;
+  // const clickHandler = () => {
+  //   return (event: React.MouseEvent) => {
+  //     event.preventDefault();
 
+  //     // modalOption.onClose;
+  //   };
+  // };
   return (
     <div
       onClick={modalOption.onClose}
