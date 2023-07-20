@@ -12,7 +12,7 @@ const Login = (modalOption: { open: any; onClose: any }) => {
   return (
     <div
       onClick={modalOption.onClose}
-      className="fixed left-0 top-0 bottom-0 bg-black bg-opacity-25 w-full flex justify-center items-center"
+      className="fixed left-0 top-0 bottom-0 z-10 bg-black bg-opacity-25 w-full flex justify-center items-center"
     >
       <form
         onClick={(e) => {

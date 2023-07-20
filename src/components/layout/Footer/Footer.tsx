@@ -41,7 +41,7 @@ const Footer = () => {
                 </span>
               </div>
             </div>
-            <div className="flex justify-between lg:w-full md:w-3/5 w-full lg:my-0 my-10">
+            <div className="flex gap-24 lg:w-full md:w-3/5 w-full lg:my-0 my-10">
               <div className="mx-2">
                 <ul className="grid gap-y-4 md:text-xl text-base font-normal">
                   <li>
@@ -75,13 +75,15 @@ const Footer = () => {
                 </ul>
               </div>
             </div>
-            <div className="flex xl:gap-x-6 xl:justify-end justify-between lg:w-full md:w-1/2 w-full md:text-base text-sm">
+            {/* <div className="flex xl:gap-x-6 xl:justify-end justify-between lg:w-full md:w-1/2 w-full md:text-base text-sm"> */}
+            <div className="flex gap-2 md:text-base text-sm h-fit w-fit">
               <input
                 type="text"
                 placeholder="Start collaborating"
-                className="bg-white rounded-lg text-[#958E8E] w-fit h-fit py-3 xl:px-3 md:px-2 px-3 outline-none"
+                // className="bg-white rounded-lg text-[#958E8E] w-fit h-fit  sm-[420]:w-full py-3 xl:px-3 md:px-2 px-3 outline-none"
+                className="bg-white rounded-lg text-[#958E8E] h-fit w-full py-3 xl:px-3 md:px-2 px-3 outline-none"
               />
-              <button className="bg-[#000211] lg:px-4 px-5 py-3 rounded-lg h-fit font-medium border-0">
+              <button className="bg-[#000211] w-full px-5 py-3 rounded-lg font-medium border-0">
                 Get Started
               </button>
             </div>
