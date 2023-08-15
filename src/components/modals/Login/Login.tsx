@@ -71,7 +71,7 @@ const Login = (modalOption: { open: any; onClose: any }) => {
             <Signup open={openSignup} onClose={() => setOpenSignup(false)} />
 
             <a
-              href="/"
+              href="/forgotpassword"
               onClick={() => setOpenResetPassword(!openResetPassword)}
               className="cursor-pointer text-[#1F2399] text-sm mt-2"
             >

@@ -6,10 +6,13 @@ import reportWebVitals from "./reportWebVitals";
 import Root from "./routes/root";
 import { ErrorPage } from "./pages/Errorpage";
 import { FAQs } from "./pages/FAQs";
+// import { Login } from "./components/modals/Login";
+// import { Signup } from "./components/modals/Signup";
+// import { ResetPassword } from "./components/modals/ResetPassword";
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "*",
     element: <Root />,
     errorElement: <ErrorPage />,
   },
@@ -17,6 +20,18 @@ const router = createBrowserRouter([
     path: "/FAQs",
     element: <FAQs />,
   },
+  // {
+  //   path: "/login",
+  //   element: <Login open={undefined} onClose={undefined} />,
+  // },
+  // {
+  //   path: "/signup",
+  //   element: <Signup open={undefined} onClose={undefined} />,
+  // },
+  // {
+  //   path: "/forgotpassword",
+  //   element: <ResetPassword open={undefined} onClose={undefined} />,
+  // },
 ]);
 
 const root = ReactDOM.createRoot(
