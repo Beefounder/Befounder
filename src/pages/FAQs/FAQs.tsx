@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { FaPlus } from "react-icons/fa";
 import { FaMinus } from "react-icons/fa";
+import { Header } from "../../components/layout/Header";
+import { Footer } from "../../components/layout/Footer";
 
 interface FaqItem {
   question: string;
@@ -49,48 +51,52 @@ const FAQs: React.FC = () => {
     setActiveIndex(activeIndex === index ? null : index);
   };
   return (
-    <main className="md:px-16 px-4 mb-12">
-      <h1 className="text-[#090A2A] font-semibold text-3xl md:text-5xl mt-14 mb-10 text-center">
-        Frequently Asked Questions
-      </h1>
-      <hr className="mb-8 text-[#090A2A]" />
+    <>
+      <Header />
+      <main className="md:px-16 px-4 mb-12">
+        <h1 className="text-[#090A2A] font-semibold text-3xl md:text-5xl mt-14 mb-10 text-center">
+          Frequently Asked Questions
+        </h1>
+        <hr className="mb-8 text-[#090A2A]" />
 
-      <div>
-        {faqItems.map((item, index) => (
-          <div
-            key={index}
-            className={`bg-[#F7F7FD] p-6 rounded-3xl mb-8 flex  md:gap-20 ${
-              activeIndex === index ? "active" : ""
-            }`}
-          >
-            <div className="w-full">
-              <h2
-                className="text-[#090A2A] text-lg md:text-2xl font-semibold mb-5"
+        <div>
+          {faqItems.map((item, index) => (
+            <div
+              key={index}
+              className={`bg-[#F7F7FD] p-6 rounded-3xl mb-8 flex  md:gap-20 ${
+                activeIndex === index ? "active" : ""
+              }`}
+            >
+              <div className="w-full">
+                <h2
+                  className="text-[#090A2A] text-lg md:text-2xl font-semibold mb-5"
+                  onClick={() => toggleAccordion(index)}
+                >
+                  {item.question}{" "}
+                </h2>
+
+                {activeIndex === index && (
+                  <p className="text-[#494A50] text-lg md:text-xl">
+                    {item.answer}
+                  </p>
+                )}
+              </div>
+              <span
+                className="text-[#090A2A] font-medium text-4xl cursor-pointer pt-2"
                 onClick={() => toggleAccordion(index)}
               >
-                {item.question}{" "}
-              </h2>
-
-              {activeIndex === index && (
-                <p className="text-[#494A50] text-lg md:text-xl">
-                  {item.answer}
-                </p>
-              )}
+                {activeIndex === index ? (
+                  <FaMinus fontSize={18} color="#090A2A" />
+                ) : (
+                  <FaPlus fontSize={18} color="#090A2A" />
+                )}
+              </span>
             </div>
-            <span
-              className="text-[#090A2A] font-medium text-4xl cursor-pointer pt-2"
-              onClick={() => toggleAccordion(index)}
-            >
-              {activeIndex === index ? (
-                <FaMinus fontSize={18} color="#090A2A" />
-              ) : (
-                <FaPlus fontSize={18} color="#090A2A" />
-              )}
-            </span>
-          </div>
-        ))}
-      </div>
-    </main>
+          ))}
+        </div>
+      </main>
+      <Footer />
+    </>
   );
 };
 
