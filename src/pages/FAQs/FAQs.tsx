@@ -65,7 +65,7 @@ const FAQs: React.FC = () => {
           >
             <div className="w-full">
               <h2
-                className="text-[#090A2A] text-xl md:text-2xl font-semibold mb-5"
+                className="text-[#090A2A] text-lg md:text-2xl font-semibold mb-5"
                 onClick={() => toggleAccordion(index)}
               >
                 {item.question}{" "}
@@ -78,7 +78,7 @@ const FAQs: React.FC = () => {
               )}
             </div>
             <span
-              className="text-[#090A2A] font-medium text-4xl cursor-pointer"
+              className="text-[#090A2A] font-medium text-4xl cursor-pointer pt-2"
               onClick={() => toggleAccordion(index)}
             >
               {activeIndex === index ? (
