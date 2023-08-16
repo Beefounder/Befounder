@@ -34,8 +34,8 @@ const Signup = (modalOption: { open: any; onClose: any }) => {
           </button>
         </div>
         <div className="px-6 md:px-24 lg:px-32">
-          <h1 className="text-xl md:text-2xl text-[#090A2A] font-medium mb-4">
-            Sign in or create an account
+          <h1 className="text-xl md:text-2xl text-[#090A2A] font-medium mb-4 max-sm:mr-5">
+            Sign in or create an account to post offer{" "}
           </h1>
           <p className="text-[#494A50] text-sm">
             Collaborate with top talents to bring your idea to life
