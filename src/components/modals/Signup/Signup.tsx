@@ -21,12 +21,9 @@ const Signup = (modalOption: { open: any; onClose: any }) => {
         onClick={(e) => {
           e.stopPropagation();
         }}
-        className="py-8 text-center bg-white overflow-hidden"
+        className="w-[51.125rem] pt-10 pb-4 text-center bg-white relative"
       >
-        <div className="flex gap-12 md:gap-32 lg:gap-40 mb-4 pl-3 md:pl-24 lg:pl-32 pr-7">
-          <h1 className="text-xl md:text-2xl text-[#090A2A] font-medium">
-            Sign in or create an account to post offer
-          </h1>
+        <div className="absolute right-0 md:left-[90%]">
           <button className="cursor-pointer p-2">
             <img
               onClick={modalOption.onClose}
@@ -37,6 +34,9 @@ const Signup = (modalOption: { open: any; onClose: any }) => {
           </button>
         </div>
         <div className="px-6 md:px-24 lg:px-32">
+          <h1 className="text-xl md:text-2xl text-[#090A2A] font-medium mb-4">
+            Sign in or create an account
+          </h1>
           <p className="text-[#494A50] text-sm">
             Collaborate with top talents to bring your idea to life
           </p>
